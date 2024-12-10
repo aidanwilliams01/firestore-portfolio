@@ -1,6 +1,4 @@
-# (Application Name)
-
-#### (Brief Description of Application)
+# Firestore Portfolio
 
 #### By Aidan Williams
 
@@ -17,6 +15,8 @@
 
 ## Description
 
+A portfolio site populated by data in a Firestore database.
+
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop._
@@ -27,12 +27,13 @@
 
 * Other commands:
   * _To build the project and start a development server, run `$ npm run start`._
-  * _To view code testing with Jest, run `$ npm run test`._
 
-## Known Bugs
+* This project requires a .env file located in the top-level of the directory populated with your Firestore database information to function.
+
+<!-- ## Known Bugs
 
 * _Any known issues_
-* _should go here_
+* _should go here_ -->
 
 ## License
 

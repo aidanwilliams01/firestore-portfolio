@@ -7,12 +7,12 @@ function Project(props){
       {/* <div> */}
       {props.auth.currentUser && <div onClick = {() => props.whenProjectClicked(props.id)}>
         <h3>{props.title}</h3>
-        <p>Link: <a href={props.link}>{props.link}</a></p>
+        <p><a href={props.link}>{props.link}</a></p>
         <hr/>
       </div>}
       {!props.auth.currentUser && <div>
         <h3>{props.title}</h3>
-        <p>Link: <a href={props.link}>{props.link}</a></p>
+        <p><a href={props.link}>{props.link}</a></p>
         <hr/>
       </div>}
     </React.Fragment>

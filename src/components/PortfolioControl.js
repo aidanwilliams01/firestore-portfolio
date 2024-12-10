@@ -41,7 +41,6 @@ function PortfolioControl() {
           });
         });
         setMainProjectList(projects);
-        setTimeout(() => setLoading(false), 1000);
       },
       (error) => {
         setError(error.message);
@@ -84,9 +83,9 @@ function PortfolioControl() {
             id: doc.id
           });
         });
-        // console.log(biography);
         setMainBiography(biography);
-        // console.log(mainBiography);
+        // setTimeout(() => setLoading(false), 1000);
+        setLoading(false);
       },
       (error) => {
         setError(error.message);
