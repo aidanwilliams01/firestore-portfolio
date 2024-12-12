@@ -16,7 +16,6 @@ function EditSkillForm (props) {
 
   return (
     <React.Fragment>
-      {/* {console.log(props)} */}
       <ReusableSkillForm
       formSubmissionHandler={handleEditSkillFormSubmission}
       buttonText="Update Skill" />

@@ -6,7 +6,6 @@ function Biography(props){
   return (
     <React.Fragment>
       <p>
-        {console.log(props)}
         {Object.values(props.biography[0])[0]}
       </p>
     </React.Fragment>
@@ -15,7 +14,6 @@ function Biography(props){
 
 Biography.propTypes = {
   biography: PropTypes.array,
-  // onSkillSelection: PropTypes.func
 };
 
 export default Biography;

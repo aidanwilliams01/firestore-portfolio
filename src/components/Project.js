@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 function Project(props){
   return (
     <React.Fragment>
-      {/* <div> */}
       {props.auth.currentUser && <div onClick = {() => props.whenProjectClicked(props.id)}>
         <h3>{props.title}</h3>
         <p><a href={props.link}>{props.link}</a></p>

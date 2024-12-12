@@ -13,7 +13,6 @@ import SkillList from './SkillList.js';
 import Biography from './Biography.js';
 
 function PortfolioControl() {
-// add field detail and editing/deletion
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [skillFormVisibleOnPage, setSkillFormVisibleOnPage] = useState(false);
   const [mainProjectList, setMainProjectList] = useState([]);
@@ -84,7 +83,6 @@ function PortfolioControl() {
           });
         });
         setMainBiography(biography);
-        // setTimeout(() => setLoading(false), 1000);
         setLoading(false);
       },
       (error) => {
@@ -116,10 +114,6 @@ function PortfolioControl() {
   const showSkillForm = () => {
     setSkillFormVisibleOnPage(true)
   }
-
-  // const showBioForm = () => {
-  //   setBioFormVisibleOnPage(true)
-  // }
 
   const handleAddingNewProjectToList = async (newProjectData) => {
     await addDoc(collection(db, "projects"), newProjectData);
@@ -183,22 +177,9 @@ function PortfolioControl() {
     setBiographyEditing(false);
   }
 
-  // const handleAddingProjectAnswers = async (newAnswerData) => {
-  //   await addDoc(collection(db, "answers"), newAnswerData);
-  //   setSelectedProject(null);
-  // }
-
   let currentlyVisibleState = null;
   let buttonText = null;
 
-  // if (auth.currentUser == null) {
-  //   return (
-  //     <React.Fragment>
-  //       <h1>You must be signed in to access the queue.</h1>
-  //     </React.Fragment>
-  //   )
-  // } else if (auth.currentUser != null) {
-    // add a link to dashboard to edit properties
       if(error) {
         currentlyVisibleState = <p>There was an error: {error}</p>
       } else if (loading) {
@@ -227,7 +208,6 @@ function PortfolioControl() {
             project={selectedProject}
             onClickingDelete={handleDeletingProject}
             onClickingEdit = {handleEditClick}
-            // onNewAnswersCreation = {handleAddingProjectAnswers} 
             />
           buttonText = "Return to Portfolio";
       } else if (selectedSkill != null) {
@@ -236,7 +216,6 @@ function PortfolioControl() {
             skill={selectedSkill}
             onClickingDelete={handleDeletingSkill}
             onClickingEdit = {handleEditClick}
-            // onNewAnswersCreation = {handleAddingProjectAnswers} 
             />
           buttonText = "Return to Portfolio";
       } else if (formVisibleOnPage) {
@@ -278,7 +257,6 @@ function PortfolioControl() {
         </React.Fragment>
       );
     }
-  // }
 
 
 export default PortfolioControl;
